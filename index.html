@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge </title>
+    <title>Página de Jorge</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
 </head>
+<body>
+    <!-- Contenido de tu página -->
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/4427486061" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Fin del contenido -->
+</body>
 <body>
     <header>
         <h1>Página de Jorge</h1>
@@ -15,7 +73,7 @@
                 <li><a href="#about">Sobre nosotros</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#testimonials">Opiniones</a></li>
-                <li><a href="#contact">Contactanos</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
@@ -23,16 +81,29 @@
     <section class="hero">
         <h2>Bienvenido a la página de Jorge</h2>
         <p>Aquí estará la información de la página</p>
-        <a href="#contact" class="cta-button">Empecemos</a>
+        <a href="button.html" class="cta-button">Empecemos</a>
+
+</div>
+<script>
+    document.getElementById("startButton").onclick = function(event) {
+        event.preventDefault();
+        document.getElementById("modal").style.display = "block";
+    };
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("modal").style.display = "none";
+    };
+</script>
+
+
     </section>
 
     <section id="about">
         <h2>Opciones</h2>
-        <p>Aquí estan las opciones disponibles</p>
+        <p>Aquí están las opciones disponibles</p>
     </section>
 
     <section id="services">
-        <h2>Opciones</h2>
+        <h2>Servicios</h2>
         <div class="service">
             <h3>Opción 1</h3>
             <p>Aquí estará la opción 1</p>
@@ -43,41 +114,15 @@
         </div>
         <div class="service">
             <h3>Opción 3</h3>
-            <p>Auí estará la opción 3</p>
+            <p>Aquí estará la opción 3</p>
         </div>
     </section>
 
     <section id="testimonials">
         <h2>Comentarios</h2>
         <div class="testimonial">
-            <p>""x" dice que "..." "</p>
+            <p>"x" dice que "..."</p>
             <cite>- Nombre del cliente</cite>
         </div>
     </section>
-
-    <section id="contact">
-        <h2>Contactanos</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu email" required>
-            <textarea name="message" placeholder="Contenido del mensaje" required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
-
-    <section id="footholder">
-        <h2>Sobre mis servicios</h2>
-        <div class="footholder">
-            <h2>Arquitecto Jorge Razo</h2>
-            <p>Arquitecto</p>
-            <cite>Construyo casas</cite>
-        </div>
-    </section>
     
-    <footer>
-        <p>&copy; 2024 Página de Jorge</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
